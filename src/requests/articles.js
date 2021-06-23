@@ -13,7 +13,8 @@ function deleteArticle(id) {
       },
       method: 'DELETE'
     }
-  )
+  ).then(data => { return data.json(); })
+  .catch(console.log);
 }
 
 function createArticle(title, content) {
