@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { createArticle } from '../requests/articles';
+import { withRouter } from 'react-router-dom';
 
-export default class Form extends React.Component {
+class Form extends React.Component {
   constructor(props) {
     super(props);
 
@@ -23,6 +24,7 @@ export default class Form extends React.Component {
   handleSubmit = (event) => {
    event.preventDefault();
    createArticle(this.state.title, this.state.content);
+   this.props.history.push('/');
   }
 
   render() {
@@ -43,3 +45,4 @@ export default class Form extends React.Component {
     );
   }
 }
+export default withRouter(Form);
