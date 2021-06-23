@@ -1,0 +1,28 @@
+body {
+  padding-top: 60px;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+
+  background: #333;
+  background-image: linear-gradient(#eceff1 .1em, transparent .1em), linear-gradient(90deg, #eceff1 .1em, transparent .1em);
+  background-size: 2em 2em;
+}
+
+@media (max-width: 980px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+.ArticlesContainer {
+  margin-top: 50px;
+}
+
+.ActiveCard {
+  margin-bottom: 25px;
+}
+
+.btn-remove-article {
+  background-color: #E51300 !important;
+}
