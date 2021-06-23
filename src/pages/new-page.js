@@ -5,12 +5,14 @@ import Form from '../components/form';
 export default class NewPage extends React.Component {
   render() {
     return(
-      <div>
+      <div className="container">
         <h1>Nuevo artículo</h1>
         <Link to="/">
-          <span>Regresar</span>
+          Regresar
         </Link>
-        <Form algo="dsa"/>
+        <br/>
+        <br/>
+        <Form/>
       </div>
     );
   }
