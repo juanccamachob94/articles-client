@@ -10,18 +10,19 @@ export default class IndexPage extends React.Component {
     this.state = {
       articles: []
     }
+  }
 
-    this.articles = this.articles.bind(this);
+  componentDidMount() {
     this.loadArticles();
   }
 
-  articles() {
+  articles = () => {
     return this.state.articles.map((article, index) => {
       return <ArticleCard article={article} key={index}/>
     });
   }
 
-  loadArticles() {
+  loadArticles = () => {
     getArticles().then(jsonR => {
       this.setState({ articles: jsonR });
     })

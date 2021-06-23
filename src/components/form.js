@@ -5,26 +5,22 @@ import { createArticle } from '../requests/articles';
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.handleTitle = this.handleTitle.bind(this);
-    this.handleContent = this.handleContent.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
       title: '',
       content: ''
     };
-
   }
 
-  handleTitle(e) {
+  handleTitle = (e) => {
     this.setState({ title: e.target.value });
   }
 
-  handleContent(e) {
+  handleContent = (e) => {
     this.setState({ content: e.target.value });
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
    event.preventDefault();
    createArticle(this.state.title, this.state.content);
   }
