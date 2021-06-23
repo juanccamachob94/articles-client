@@ -5,17 +5,12 @@ import { deleteArticle } from '../requests/articles';
 export default class ArticleCard extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.parent);
     this.removeArticle = this.removeArticle.bind(this);
 
-    this.state = {
-      active: true
-    }
   }
 
   removeArticle() {
     deleteArticle(this.props.article.id);
-    this.setState({ active: false });
   }
 
   render() {

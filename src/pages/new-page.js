@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Form from '../components/form';
 
 export default class NewPage extends React.Component {
   render() {
@@ -9,6 +10,7 @@ export default class NewPage extends React.Component {
         <Link to="/">
           <span>Regresar</span>
         </Link>
+        <Form algo="dsa"/>
       </div>
     );
   }

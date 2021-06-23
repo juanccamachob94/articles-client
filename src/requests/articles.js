@@ -7,7 +7,7 @@ function getArticles() {
 function deleteArticle(id) {
   fetch('https://articles-api-1.herokuapp.com/api/articles/' + id,
     {
-      header: {
+      headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
@@ -15,4 +15,18 @@ function deleteArticle(id) {
     }
   )
 }
-export { getArticles, deleteArticle };
+
+function createArticle(title, content) {
+  fetch('https://articles-api-1.herokuapp.com/api/articles',
+    {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({ title: title, content: content })
+    }
+  )
+}
+
+export { getArticles, deleteArticle, createArticle };
